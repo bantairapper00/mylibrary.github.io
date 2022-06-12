@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My library-Home</title>
+</head>
+
+<body>
+    <div class="Navbar">
+        <input id="nav-toggle" type="checkbox">
+        <logo id="mylib">My Library</logo>
+        <div class="Nav">
+            <ul>
+                <li>
+                    <a href="/" class="home">HOME</a>
+                </li>
+                <li>
+                    <a href="/" class="home" id="about">ABOUT</a>
+                </li>
+            </ul>
+            <div class="search_area">
+                <input type="text" placeholder="Search" id="searchBox">
+                <button id="searchBtn">Search</button>
+            </div>
+        </div>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+
+    </div>
+    </div>
+    </div>
+
+    <section class="container">
+
+        <h1 class="my-lib">My Library</h1>
+        <hr style="margin: 10px 0; border-top:1px solid rgb(173, 159, 159);">
+        <form id="library-form">
+            <div class="form">
+                <p>Name</p>
+                <input type="text" placeholder="Book Name" class="bookBox" id="name">
+            </div>
+            <div class="form">
+                <p>Author</p>
+                <input type="text" placeholder="Author" id="author">
+            </div>
+            <div class="form">
+                <p>Type:</p>
+                <div class="radio">
+                    <div><input type="radio" name="mytype" id="fic" value="Fiction">Fiction</div>
+                    <div><input type="radio" name="mytype" id="manga" value="Literature">Literature</div>
+                    <div><input type="radio" name="mytype" id="cp" value="Educational">Educational</div>
+                    <div><input type="radio" name="mytype" id="cooking" value="Cooking">Cooking</div>
+                </div>
+            </div>
+            <button type="button" id="addbookBtn">Add Book</button>
+        </form>
+        <h1 class="booksTxt">Your Books<img class="imgBook" src="./images/book.png"></h1>
+        <table class="section-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Type</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                
+            </tbody>
+        </table>
+    </section>
+
+
+</body>
+<script src="index.js"></script>
+
+</html>

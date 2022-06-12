@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #3C2716;
+}
+
+body{
+    background: rgba(242, 234, 215, 0.9) url("./images/background.jpg");
+    background-blend-mode:darken;
+    background-position: center;
+    background-size:cover;
+}
+
+.Navbar{
+    position: sticky;
+    top: 0px;
+    display:flex;
+    align-items: center;
+    background-color: #F2EAD7;
+    height: 55px;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 10;
+}
+
+.Nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.Navbar ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    width: 140px;
+    justify-content: space-between;
+}
+
+.Navbar ul li a{
+    color: #3C2716;
+    text-decoration: none;
+}
+
+#mylib{
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    padding-right: 30px;
+    min-width: 150px;
+}
+
+.home{
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    font-weight:initial;
+}
+
+#searchBox{
+    padding: 8px;
+    font-size: 17px;
+    border: solid 1px #3C2716;
+    border-radius: 5px;
+    width: 220px;
+}
+#searchBtn{
+    width: 100px;
+    font-size: 17px;
+    background-color: #F2EAD7;
+    padding: 9px;
+    border: solid 1px #3C2716;
+    border-radius: 5px;
+
+}
+
+#searchBtn:hover{
+    background-color: #3C2716;
+    color: #F2EAD7;
+    border: solid 1px #F2EAD7;
+
+}
+
+#nav-toggle{
+    position: absolute;
+    display: none;
+}
+
+.icon-burger{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.icon-burger .line{
+    width: 38px;
+    height: 5px;
+    background-color: #3C2716;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 768px) {
+    .Nav{
+        display: none;
+    }
+    .Nav ul{
+        display: flex;
+        width:100%;
+        flex-direction: column;
+        justify-content:space-around;
+        color: rgb(0, 0, 0);
+    }
+    
+    .search_area{
+        display: block;
+        margin: auto;
+        margin-bottom:10px ;
+    }
+
+    .Nav ul li a{
+        font-size: 17px;
+    }
+
+    .icon-burger{
+        display: block;
+    }
+
+    :checked ~ .Nav{
+        display: flex;
+        width:100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: fixed;
+        background-color: rgba(242, 234, 215, 0.9);
+        top:56px;
+        left: 0;
+        right: 0;
+        z-index: 11;
+        font-size: 35px;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+
+    :checked ~ .icon-burger .line:nth-child(1){
+        transform: translateY(10px) rotate(45deg);
+        transition: all 0.3s linear;
+    }
+    :checked ~ .icon-burger .line:nth-child(2){
+         opacity: 0;
+        
+    }
+    :checked ~ .icon-burger .line:nth-child(3){
+        transform: translateY(-10px) rotate(-45deg); 
+        transition: all .3s linear;
+    }
+
+    
+}
+
+.container{
+    margin: 40px auto;
+    width: 75%;
+    background-color: #F2EAD7;
+    border-radius: 10px;
+    padding: 20px 70px;
+}
+
+.my-lib{
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.form p{
+    width: 150px;
+    font-size: 17px;
+
+}
+
+.form input{
+    padding: 9px;
+    width: 480px;
+    border: solid 1px gray; 
+    border-radius: 6px;
+}
+
+.radio{
+    width: 480px;
+}
+
+.radio div{
+    margin-bottom: 4px;
+}
+
+.radio input{
+    width: auto;
+    margin-right: 10px;
+    border: gray;
+}
+
+#addbookBtn{
+    width: 90px;
+    padding: 8px;
+    border: solid 1px gray;
+    border-radius: 5px;
+    background-color: #3C2716;
+    color: #F2EAD7;
+}
+
+#addbookBtn:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+#addbookBtn:active{
+    background-color: #F2EAD7;
+    color: #3C2716;
+    border: solid 1px #3C2716;
+}
+
+.section-table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 9px auto 30px auto;
+    font-size: 0.9em;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.section-table thead tr{
+    background-color: #3C2716;
+    text-align: left;
+    font-weight: bold;
+}
+
+.section-table thead tr th{
+    color: #F2EAD7;
+}
+
+.section-table thead tr th,
+.section-table tbody tr td{
+    text-align: left;
+    padding: 12px 15px;
+    /* border: 1px solid red; */
+}
+
+
+
+.section-table tbody tr{
+    border-bottom: 0.5px solid #a5a4a3;
+    font-size: 1.05em;
+    text-transform: capitalize;
+}
+
+.section-table tbody tr:nth-of-type(even){
+    background-color: #eee4cd;
+}
+
+.booksTxt{
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.imgBook{
+    margin-left: 7px;
+    width: 30px;
+}
+
+.deleteBtn{
+    width: 25px;
+    cursor: pointer;
+}
+.deleteBtn:active{
+    width: 25px;
+    border: 3px solid #eee4cd;
+}
+
+
+@media screen and (max-width: 774px) {
+    .container{
+        margin: 30px auto;
+        width: 90%;
+        padding: 20px 40px;
+    }
+    
+    .form p{
+        max-width: 80px;
+        width: 100%;
+        font-size: 17px;
+    }
+    
+    .form input{
+        padding: 9px;
+        max-width: 360px;
+        width: 100%;
+
+    }
+    
+    .radio{
+        max-width: 360px;
+        width: 100%;
+    }
+    
+    .radio div{
+        margin-bottom: 4px;
+    }
+    
+    .radio input{
+        width: auto;
+        margin-right: 10px;
+        border: gray;
+    }
+    
+    .section-table thead tr th,
+    .section-table tbody tr td{
+        max-width: 60px;
+        overflow: hidden;
+        text-align: left;
+        padding: 12px 8px;
+        text-overflow:ellipsis;
+    }
+    
+    
+}
